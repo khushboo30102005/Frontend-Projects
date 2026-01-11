@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --background-color: #F2F8ED;
+  --element-color: #FBFBFB;
+  --goal-element-color: #fff;
+  --placeholder-color: #D9D9D9;
+  --today-color: black;
+  --colors: #858585;
+  --reset: #61481C;
+  --checkbox-color: #61481C4D;
+  background-color: var(--background-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+body.dark {
+  --background-color: #1E201E;
+  --element-color: #3C3D37;
+  --goal-element-color: #4b5049;
+  --today-color: #fff;
+  --colors: #cdcdcd;
+  --reset: #cdcdcd;
+  --checkbox-color: #e9990d;
+}
+
+.mode-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 10px;
+  color: var(--reset);
+}
+
+.mode {
+  box-shadow: 1px 1px 4px -1px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+main {
+  padding: 0 1.5rem 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #48A300;
+}
+
+.title span {
+  color: var(--reset);
+}
+
+.sub-title {
+  color: var(--today-color);
+}
+
+.app-container {
+  width: 90%;
+  max-width: 660px;
+  background-color: var(--element-color);
+  margin: auto;
+  border-radius: 15px;
+  padding: 2% 5%;
+  box-shadow: 1px 2px 26px -21px;
+}
+
+.sun {
+  margin-left: -38px;
+  vertical-align: middle;
+  margin-left: 1rem;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.mouth {
+  position: absolute;
+  margin-left: -31px;
+  margin-top: 22px;
+}
+
+.progress-label {
+  font-size: 1rem;
+  color: var(--colors);
+}
+
+.progress-bar {
+  margin-block: 24px;
+  height: 30px;
+  background-color: #48A3001A;
+  border-radius: 15px;
+}
+
+.progress-value {
+  width: 0;
+  height: 100%;
+  background-color: #48A300;
+  border-radius: 15px;
+  color: #EEFFE0;
+  font-weight: 500;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.25s ease-in-out;
+}
+
+.progress-value span {
+  padding-left: 16px;
+  min-width: max-content;
+}
+
+
+.error-label {
+  position: absolute;
+  margin-top: 4px;
+  font-size: 10px;
+  color: #FF5151;
+  display: none;
+}
+
+.show-error .error-label {
+  display: block;
+}
+
+.goal-box {
+  height: 80px;
+  background-color: var(--goal-element-color);
+  border: 1px solid #0000001A;
+  border-radius: 17px;
+  margin-block: 42px;
+  box-shadow: 1px 2px 26px -21px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--checkbox-color);
+  border-radius: 50%;
+  margin-left: 25px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  display: none;
+}
+
+.goal-input {
+  width: 100%;
+  height: 100%;
+  padding-left: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  color: var(--today-color);
+}
+
+.goal-input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.reset {
+  font-size: 0.9rem;
+  color: var(--reset);
+  font-weight: 500;
+  box-shadow: 1px 1px 4px -1px;
+  width: max-content;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px -6px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #49a300d7;
+}
+
+.bottom-quote {
+  color: var(--today-color);
+  font-weight: 600;
+  text-align: center;
+  margin: 50px;
+}
+
+.by-Made {
+  color: var(--colors);
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+}
+
+.completed .custom-checkbox {
+  background-color: #48A300;
+  border-color: #48A300;
+}
+
+.completed .check-icon {
+  display: block;
+}
+
+.completed .goal-input {
+  color: #48A300;
+  text-decoration-line: line-through;
+}
+
+@media(max-width:600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .sub-title {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .mouth {
+    margin-left: -31px;
+    margin-top: 20px
+  }
+
+  .progress-label {
+    font-size: 14px;
+  }
+
+  .progress-bar {
+    height: 24px;
+  }
+
+  .goal-box {
+    height: 50px;
+    margin-block: 20px;
+    border-radius: 12px;
+  }
+
+  .custom-checkbox {
+    width: 16px;
+    height: 16px;
+  }
+
+  .goal-input {
+    font-size: 12px;
+  }
+
+  .reset {
+    font-size: 0.6rem;
+  }
+
+  .bottom-quote {
+    margin: 30px;
+  }
+
+}
