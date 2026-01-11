@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "tailwind": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+        "tailwind-minify": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch --minify"
+    },
+    "dependencies": {
+        "@tailwindcss/cli": "^4.1.13",
+        "tailwindcss": "^4.1.13"
+    },
+    "devDependencies": {
+        "prettier": "^3.6.2",
+        "prettier-plugin-tailwindcss": "^0.6.14"
+    }
+}
