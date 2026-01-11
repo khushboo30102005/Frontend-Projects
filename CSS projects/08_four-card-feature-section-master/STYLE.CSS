@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  color: #697077;
+  text-align: center;
+  
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-card h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-inline: 1.5rem;
+}
+
+.hero-card h1 {
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: #4c4e61;
+}
+
+.container {
+  max-width: 100vw;
+  margin: 1.5rem;
+  display: grid;
+  
+  gap: 1rem;
+  grid-template-areas:
+    'hero-card'
+    'Supervisorr'
+    'Team-Builder'
+    'Karma'
+    'Calculator'
+  ;
+}
+.hero-card{
+  grid-area: hero-card;
+  /* align-self: center; */
+}
+
+.Supervisorr {
+  grid-area: Supervisorr;
+  border-top: 2px solid #45d3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.Team-Builder {
+  grid-area: Team-Builder;
+
+  border-top: 2px solid #ea5353;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.Karma {
+  grid-area: Karma;
+  border-top: 2px solid #fcaf4a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+}
+
+.Calculator {
+  grid-area: Calculator;
+  border-top: 2px solid #549ef2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.container img {
+  width: 40px;
+  margin-block: 30px;
+  margin-left: 171px;
+}
+
+
+@media (min-width:800px) {
+  .container {
+    grid-template-areas:
+      'hero-card hero-card hero-card'
+      'Supervisorr Team-Builder Calculator'
+      'Supervisorr Karma Calculator'
+    ;
+  }
+  .hero-card{
+    grid-column: hero-card;
+    justify-self: center;
+  max-width: 500px;
+  }
+  .Supervisorr {
+    align-self: center;
+  }
+
+  .Calculator {
+    align-self: center;
+  }
+
+}

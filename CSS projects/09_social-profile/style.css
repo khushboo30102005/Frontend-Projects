@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  /* min-height: 60vh; */
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  background-color: #141414;
+  max-width: 300px;
+  height: 480px;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  border-radius: 10px;
+}
+
+.avatar-jessica {
+  width: 100%;
+  max-width: 30%;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-left: 30%;
+
+}
+
+.intro {
+  margin-top: -10px;
+}
+
+.name {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.address {
+  color: #c5f82a;
+  text-align: center;
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.position {
+  text-align: center;
+  font-size: 11px;
+}
+
+.account{
+  background-color: #1f1f1f;
+  width: 100%;
+  max-width: 260px;
+  border-radius: 5px;
+  text-align: center;
+  margin-inline: auto;
+  height: 30px;
+  margin-block: 15px;
+  padding-top: 7px;
+}
+.account:hover{
+  background-color:#c5f82a ;
+  color: black;
+  cursor: pointer;
+}

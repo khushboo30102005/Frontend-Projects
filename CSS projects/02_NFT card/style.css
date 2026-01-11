@@ -1,0 +1,74 @@
+body {
+  background-color: #0D1A2D;
+  font-family: sans-serif;
+
+}
+
+.card {
+  background-color: #15273F;
+  width: 100%;
+  max-width: 302px;
+  height: 515px;
+  position: absolute;
+  margin: auto;
+  inset: 0px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 5px 40px 17px rgba(0, 0, 0, 0.4);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #ffffff;
+}
+
+p {
+  color: #8bacda;
+}
+
+.A {
+  margin-right: 103px;
+  color: #00fff7;
+}
+
+span {
+  color: #8bacda;
+  font-weight: bold;
+}
+
+hr {
+  color: rgba(0, 0, 0, 0.2);
+  margin-top: 24px;
+}
+
+img span {
+  width: "20px";
+}
+
+.ethereum {
+  width: 9px;
+  margin-right: 5px;
+
+}
+
+.clock {
+  width: 20px;
+  margin-bottom: -3px;
+}
+
+.avatar {
+  width: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: -10px;
+  margin-right: 9px;
+}
+
+k {
+  color: #ffffff;
+
+}
